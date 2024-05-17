@@ -1,20 +1,20 @@
 import React from "react"
 import { Button } from "../ui/button"
 import { useNavigate } from "react-router-dom";
-import { ProgressUpdate } from "./ProgressSetter";
 interface Props{
   ButtonText : string;
   NextLink : string;
-  NextValue: number;
 }
 
-const FormBottomBar: React.FC<Props> = ({ ButtonText, NextLink, NextValue }) => {
+const FormBottomBar: React.FC<Props> = ({ ButtonText, NextLink }) => {
   const navigate = useNavigate();
 
-  const handleNext = () =>{
-    ProgressUpdate(NextValue, 'set');
-    navigate(NextLink);
+    
+    const handleNext = () => {
+      navigate(NextLink);
   }
+
+
   return (
     <div className="flex items-center ">
       <div className="flex flex-row space-x-[470px]">

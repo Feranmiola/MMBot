@@ -6,6 +6,12 @@ interface Props{
 }
 
 const TopBarForms: React.FC<Props> = ({prpgressValue }) =>{
+  const [progress, setProgress] = React.useState(0)
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => setProgress(prpgressValue), 500)
+    return () => clearTimeout(timer)
+  }, [])
   return (
     <div className="flex items-center justify-center">
       <div className="flex space-x-[565px] items-center">
@@ -18,7 +24,7 @@ const TopBarForms: React.FC<Props> = ({prpgressValue }) =>{
 
         <div className="flex flex-row">
           <p className="">Step</p>
-          <Progress className=" mt-3 ml-2 [&>*]:bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[122px] h-[5px] " value={prpgressValue} />
+          <Progress className=" mt-3 ml-2 [&>*]:bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[122px] h-[5px] " value={progress} />
         </div>
       </div>
     </div>

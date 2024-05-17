@@ -1,3 +1,4 @@
+import TopBarForms from "@/components/shared/TopBarForms";
 import FormBottomBar from "@/components/shared/FormBottomBar"
 import { Input } from "@/components/ui/input";
 
@@ -17,7 +18,7 @@ const CreateNewProfile = () => {
   const [radioValue, setRadioValue] = useState(0);
   const buttonText = "Create Profile";
   const nextLink = "/new-profile";
-  const nextvalue = 30;
+  const newValue = 15
 
   function useRadio(value: number){
     if(radioValue == value){
@@ -29,7 +30,10 @@ const CreateNewProfile = () => {
 
 
   return (
-    <div className="flex items-center justify-center mt-20 pb-10">
+    <div className="flex flex-col items-center justify-center mt-40 pb-10">
+      <div className="mb-16">
+        <TopBarForms prpgressValue = {newValue}/>
+      </div>
       <div className="flex flex-col  w-[832px]">
         <div className="flex flex-col">
           <div className="flex flex-col">
@@ -76,7 +80,7 @@ const CreateNewProfile = () => {
                     <div className=" inputDivFocus items-center justify-center flex h-[64px] w-[360px] rounded-[12px]">
                       <Select>
                       <SelectTrigger className="shad-select data-[placeholder]:text-[#B7B7BD]">
-                        <SelectValue placeholder="Select Router Address"/>
+                        <SelectValue placeholder="Select Router Address" className="data-[placeholder]:text-muted-foreground" />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="light">Uniswap</SelectItem>
@@ -137,7 +141,7 @@ const CreateNewProfile = () => {
         </div>
       
         <div className="flex items-center justify-center">
-          <FormBottomBar ButtonText = {buttonText} NextLink = {nextLink} NextValue = {nextvalue}/>
+          <FormBottomBar ButtonText = {buttonText} NextLink = {nextLink}/>
         </div>
       </div>
     </div>

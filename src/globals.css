@@ -116,7 +116,7 @@
     }
   
     .shad-input {
-      @apply bg-[#F7F7F7] placeholder:text-[#B7B7BD] focus:bg-white h-[62px] w-[356px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+      @apply bg-[#F7F7F7] placeholder:text-[#B7B7BD] focus:bg-white h-[62px] w-[358px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
     }
     
     .shad-input-custom {
