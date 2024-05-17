@@ -126,6 +126,10 @@
     .shad-input {
       @apply bg-[#F7F7F7] placeholder:text-[#B7B7BD] focus:bg-white h-[62px] w-[358px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
     }
+
+    .shad-input-custom2{
+      @apply bg-[#F7F7F7] placeholder:text-[#B7B7BD] focus:bg-white h-[62px] w-[557px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+    }
     
     .shad-input-custom {
       @apply bg-white placeholder:text-[#B7B7BD] focus:bg-white w-[660px] h-[53px] focus:ring-0 focus:ring-opacity-0 focus:ring-offset-0 ring-0 ring-offset-0 border-0 focus:border-0 focus:border-transparent text-[16px] !important;
