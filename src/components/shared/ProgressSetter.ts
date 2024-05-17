@@ -1,7 +1,12 @@
 import { useState } from "react";
-export const ProgressUpdate = (newProgressValue: number) => {
-    const[progress, setProgress] = useState(0);
+export const ProgressUpdate = (newProgressValue: number, action: string) => {
+    const[progress, setProgress] = useState(15);
 
-    setProgress(newProgressValue);
-    return progress;
+    if(action == 'get'){
+        return progress;
+    }else{
+        setProgress(newProgressValue);
+        return progress;
+    }
 }
+

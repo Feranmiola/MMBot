@@ -78,3 +78,68 @@
       @apply bg-background text-foreground;
     }
   }
+
+  Select::placeholder{
+    color: #B7B7BD;
+  }
+
+  .validateText{
+    background: linear-gradient(90.64deg, #6938EF 52.02%, #DE80FF 125.33%);
+    
+    -webkit-background-clip: text;
+  /* Make the text fill color transparent so the gradient shows through */
+    -webkit-text-fill-color: transparent;
+
+    cursor: pointer;
+  }
+
+  .inputDivFocus:focus-within{
+    background-image: linear-gradient(130.18deg, #6938EF 1.57%, #DE80FF 54.28%, #80CAFF 97.33%);
+  }
+  .inputDivSelected{
+    background-image: linear-gradient(130.18deg, #6938EF 1.57%, #DE80FF 54.28%, #80CAFF 97.33%);
+  }
+  @layer components {
+    /* SHADCN COMPONENTS */
+    /* Form */
+    .shad-form_label {
+      @apply text-black !important; /* Adjusted for light mode */
+    }
+  
+    .shad-form_message {
+      @apply text-red !important;
+    }
+  
+    .shad-input {
+      @apply bg-[#F7F7F7] placeholder:text-[#B7B7BD] focus:bg-white h-[62px] w-[356px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+    }
+    
+    .shad-input-custom {
+      @apply bg-white placeholder:text-[#B7B7BD] focus:bg-white w-[660px] h-[53px] focus:ring-0 focus:ring-opacity-0 focus:ring-offset-0 ring-0 ring-offset-0 border-0 focus:border-0 focus:border-transparent text-[16px] !important;
+    }
+
+    .shad-select {
+      @apply bg-[#F7F7F7] placeholder:text-[#B7B7BD] focus:bg-white h-[62px] w-[356px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+    }
+  
+  
+    .shad-textarea {
+      @apply h-36 bg-gray-100 rounded-xl border border-gray-300 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-gray-300 !important;
+    }
+  
+    /* Button */
+    .shad-button_primary {
+      @apply bg-blue-500 hover:bg-blue-600 text-white flex gap-2 !important; /* Adjusted for light mode */
+    }
+  
+    .shad-button_dark_4 {
+      @apply h-12 bg-gray-400 px-5 text-white flex gap-2 !important; /* Adjusted for light mode */
+    }
+  
+    .shad-button_ghost {
+      @apply flex gap-4 items-center justify-start hover:bg-transparent hover:text-black !important; /* Adjusted for light mode */
+    }
+  
+  }
+  
+  

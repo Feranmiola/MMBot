@@ -17,7 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      
       colors: {
+        'custom-gradient': 'linear-gradient(130.18deg, #6938EF 1.57%, #DE80FF 54.28%, #80CAFF 97.33%)',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
