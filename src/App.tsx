@@ -16,7 +16,7 @@ function App() {
                 <Route index element = { <CreateNewProfile/> }/>
                 <Route path= "/create-sub-wallets" element = { <CreateSubWallets/> } />
                 <Route path= "/new-profile" element = { <NewProfile/> } />
-                <Route path= "/sub-wallets" element = { <ViewSubWallets/> } />
+                <Route path= "/sub-wallets" element = { <CreateSubWallets/> } />
               </Route>
       </Routes>
 

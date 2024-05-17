@@ -29,7 +29,7 @@ const FormBottomBar: React.FC<Props> = ({ ButtonText, NextLink }) => {
         </div>
         <div className="flex">
           
-          <Button onClick={handleNext} className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[200px] hover:scale-110 transition ease-in-out delay-150 duration-300 h-[60px] text-[16px] rounded-full">{ButtonText}</Button>
+          <Button onClick={handleNext} className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[200px] hover:scale-110 transition ease-in-out h-[60px] text-[16px] rounded-full">{ButtonText}</Button>
         </div>
       </div>
         

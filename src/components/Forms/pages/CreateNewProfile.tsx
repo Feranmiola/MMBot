@@ -30,7 +30,7 @@ const CreateNewProfile = () => {
 
 
   return (
-    <div className="flex flex-col items-center justify-center mt-40 pb-10">
+    <div className="flex flex-col items-center justify-center mt-16 pb-10">
       <div className="mb-16">
         <TopBarForms prpgressValue = {newValue}/>
       </div>
