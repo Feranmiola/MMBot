@@ -6,6 +6,11 @@
   .progressBG{
     background-color: linear-gradient(90.64deg, #6938EF 52.02%, #DE80FF 125.33%);;
   }
+
+  html {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
   @layer base {
     :root {
       --background: 0 0% 100%;
