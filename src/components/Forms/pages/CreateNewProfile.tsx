@@ -18,7 +18,8 @@ const CreateNewProfile = () => {
   const [radioValue, setRadioValue] = useState(0);
   const buttonText = "Create Profile";
   const nextLink = "/new-profile";
-  const newValue = 15
+  const newValue = 15;
+  const initValue = 0;
 
   function useRadio(value: number){
     if(radioValue == value){
@@ -32,7 +33,7 @@ const CreateNewProfile = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-16 pb-10">
       <div className="mb-16">
-        <TopBarForms prpgressValue = {newValue}/>
+      <TopBarForms prpgressValue = {newValue} oldValue = {initValue}/>
       </div>
       <div className="flex flex-col  w-[832px]">
         <div className="flex flex-col">

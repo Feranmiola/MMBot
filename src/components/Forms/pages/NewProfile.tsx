@@ -9,7 +9,9 @@ const NewProfile = () => {
   const privateKey = "uisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkk";
   const buttonText = "Proceed";
   const nextLink = "/sub-wallets";
-  const newValue = 30
+  const newValue = 30;
+  const initValue = 15;
+
 
 
 
@@ -17,7 +19,7 @@ const NewProfile = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-16 pb-10">
     <div className="mb-16">
-      <TopBarForms prpgressValue = {newValue}/>
+      <TopBarForms prpgressValue = {newValue} oldValue = {initValue}/>
     </div>
     <div className="flex flex-col  w-[832px]">
       <div className="flex flex-col">

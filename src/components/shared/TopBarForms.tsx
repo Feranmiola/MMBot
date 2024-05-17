@@ -3,10 +3,11 @@ import { Progress } from "@/components/ui/progress"
 
 interface Props{
   prpgressValue: number;
+  oldValue: number;
 }
 
-const TopBarForms: React.FC<Props> = ({prpgressValue }) =>{
-  const [progress, setProgress] = React.useState(0)
+const TopBarForms: React.FC<Props> = ({prpgressValue, oldValue }) =>{
+  const [progress, setProgress] = React.useState(oldValue)
 
   React.useEffect(() => {
     const timer = setTimeout(() => setProgress(prpgressValue), 500)

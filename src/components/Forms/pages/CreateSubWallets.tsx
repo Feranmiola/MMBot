@@ -5,13 +5,14 @@ import FormBottomBar from "@/components/shared/FormBottomBar"
 const CreateSubWallets = () => {
   const buttonText = "Proceed";
   const nextLink = "/sub-wallets";
-  const newValue = 50
+  const newValue = 50;
+  const initValue = 30;
 
   
   return (
     <div className="flex flex-col items-center justify-center mt-16 pb-10">
     <div className="mb-16">
-      <TopBarForms prpgressValue = {newValue}/>
+      <TopBarForms prpgressValue = {newValue} oldValue = {initValue}/>
     </div>
     <div className="flex flex-col  w-[832px]">
       <div className="flex flex-col">
