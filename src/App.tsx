@@ -17,6 +17,7 @@ function App() {
                 <Route path= "/create-sub-wallets" element = { <CreateSubWallets/> } />
                 <Route path= "/new-profile" element = { <NewProfile/> } />
                 <Route path= "/sub-wallets" element = { <CreateSubWallets/> } />
+                <Route path= "/sub-wallets-View" element = { <ViewSubWallets/> } />
               </Route>
       </Routes>
 
