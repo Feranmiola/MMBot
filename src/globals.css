@@ -2,6 +2,10 @@
   @tailwind components;
   @tailwind utilities;
 
+
+  .progressBG{
+    background-color: linear-gradient(90.64deg, #6938EF 52.02%, #DE80FF 125.33%);;
+  }
   @layer base {
     :root {
       --background: 0 0% 100%;
