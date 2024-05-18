@@ -10,6 +10,8 @@ import DashboardLayout from './components/Dashboard/DashboardLayout'
 import Dashboard from './components/Dashboard/pages/Dashboard'
 import FillUp from './components/Dashboard/pages/FillUp'
 import FundSuballet from './components/Dashboard/pages/FundSub-Wallet'
+import SettingsLayout from './components/Settings/SettingsLayout'
+import AddWallets from './components/Settings/pages/AddWallets'
 
 function App() {
 
@@ -26,6 +28,12 @@ function App() {
 
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/fillUp" element={<FillUp />} />
+          <Route path="/fundsubwallets" element={<FundSuballet />} />
+        </Route>
+
+        <Route element={<SettingsLayout />}>
+          <Route path="/addwallets" element={<AddWallets />} />
           <Route path="/fillUp" element={<FillUp />} />
           <Route path="/fundsubwallets" element={<FundSuballet />} />
         </Route>
