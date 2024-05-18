@@ -122,11 +122,12 @@ const CreateNewProfile = () => {
                   <div>
                     <p className="text-[20px] font-semibold">Pool Pair</p>
                   </div>
-                  <div className="flex flex-row items-center justify-between space-x-3 h-[64px] rounded-[12px] inputDivFocus border-[2px] mt-1">
-                    
-                      <Input className="shad-input-custom ml-1 " placeholder="Enter Pool Pair"/>
-                    
-                    <p className="pr-7 validateText text-[16px] font-bold">Validate</p>
+                  <div className="flex flex-row items-center justify-center space-x-3 h-[64px] w-[753px] rounded-[12px] inputDivFocus border-[2px] mt-1">
+                    <div className="bg-white h-[58px] w-[747px] flex items-center justify-center flex-row rounded-[12px]">
+                      <Input className="shad-input-fillup-noDM h-[56px] w-[723px] ml-1 " placeholder="Enter Pool Pair"/>
+                      
+                      <p className="pr-7 validateText text-[16px] font-bold">Validate</p>
+                    </div>
                   </div>
                 </div>
 
