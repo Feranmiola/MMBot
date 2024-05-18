@@ -23,7 +23,7 @@ import {
 const CreateSubWallets = () => {
   const [isGenerated, setisGenerated] = useState(false)
   const buttonText = "Proceed to Account";
-  const nextLink = "/sub-wallets";
+  const nextLink = "/fundsubwallets";
   const newValue = 50;
   const initValue = 30;
 

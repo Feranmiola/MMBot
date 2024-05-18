@@ -7,9 +7,16 @@ import {
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+import { useNavigate } from "react-router-dom"
 
 
 const FundSuballet = () => {
+
+  const navigate = useNavigate()
+
+  const handleFund =()=>{
+    navigate('/fillup');
+  }
   return (
     <div className="flex flex-col items-center justify-center mt-20">
       <div>
@@ -45,7 +52,7 @@ const FundSuballet = () => {
 
               <div className="flex flex-row justify-between items-center ">
                 <p className="text-[#8E8E8E] text-[16px]">Total: <span className="text-[#1D1D1D] font-medium">410 BNB</span></p>
-                <Button className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[160px] hover:scale-110 transition ease-in-out h-[60px] text-[16px] rounded-full">Fund Wallets</Button>
+                <Button onClick={handleFund} className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[160px] hover:scale-110 transition ease-in-out h-[60px] text-[16px] rounded-full">Fund Wallets</Button>
               </div>
 
             </div>
