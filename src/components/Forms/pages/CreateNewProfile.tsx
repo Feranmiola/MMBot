@@ -101,7 +101,7 @@ const CreateNewProfile = () => {
                     <RadioGroup className="flex flex-row space-x-3 mt-1">
                       <div className={`flex items-center justify-center rounded-[12px] border-[1px] border-[#CFCFCF66] space-x-2 w-[172px] h-[64px] ${useRadio(1)}`}>
                         <div className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3" >
-                          <Label htmlFor="option-one" className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
+                          <Label htmlFor="option-one" className=" cursor-pointer bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
                             <RadioGroupItem onClick={() => setRadioValue(1)} value="option-one" id="option-one" className=""/>
                             <p className="">BSC</p>
                           </Label>
@@ -109,7 +109,7 @@ const CreateNewProfile = () => {
                       </div>
                       <div className={`flex items-center justify-center rounded-[12px] border-[1px] border-[#CFCFCF66] space-x-2 w-[172px] h-[64px] ${useRadio(2)}`}>
                         <div className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
-                          <Label htmlFor="option-two" className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
+                          <Label htmlFor="option-two" className=" cursor-pointer bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
                             <RadioGroupItem className="" onClick={() => setRadioValue(2)} value="option-two" id="option-two" />
                             <p className="">Custom</p>
                           </Label>

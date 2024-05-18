@@ -46,13 +46,13 @@ const [radioValue, setRadioValue] = useState(0);
             <p className="text-[20px] font-semibold">Quote Token Address</p>
             <RadioGroup className="flex flex-row space-x-3 mt-1">
               <div className={`flex items-center justify-center rounded-[12px] border-[1px] border-[#CFCFCF66] space-x-2 w-[265px] h-[45px] ${useRadio(1)}`}>
-                <Label htmlFor="option-one" className="bg-white w-[263px] h-[44px] rounded-[12px] flex items-center justify-center space-x-3">
+                <Label htmlFor="option-one" className=" cursor-pointer bg-white w-[263px] h-[44px] rounded-[12px] flex items-center justify-center space-x-3">
                   <RadioGroupItem onClick={() => setRadioValue(1)} value="option-one" id="option-one" />
                   <p>One-to-Many</p>
                 </Label>
               </div>
               <div className={`flex items-center justify-center rounded-[12px] border-[1px] border-[#CFCFCF66] space-x-2 w-[265px] h-[45px] ${useRadio(2)}`}>
-                <Label htmlFor="option-two" className="bg-white w-[263px] h-[44px] rounded-[12px] flex items-center justify-center space-x-3">
+                <Label htmlFor="option-two" className=" cursor-pointer bg-white w-[263px] h-[44px] rounded-[12px] flex items-center justify-center space-x-3">
                   <RadioGroupItem onClick={() => setRadioValue(2)} value="option-two" id="option-two" />
                   <p>Many-to-One</p>
                 </Label>

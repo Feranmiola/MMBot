@@ -35,19 +35,19 @@ const SwapRate = () => {
         <div>
           <RadioGroup className="flex flex-row space-x-3 mt-1">
             <div className={`flex items-center justify-center rounded-[12px] border-[1px] border-[#CFCFCF66] space-x-2 w-[172px] h-[48px] ${useRadio(1)}`}>
-              <Label htmlFor="option-one" className="bg-white w-[170px] rounded-[12px] h-[46px] flex items-center justify-center space-x-3">
+              <Label htmlFor="option-one" className=" cursor-pointer bg-white w-[170px] rounded-[12px] h-[46px] flex items-center justify-center space-x-3">
                 <RadioGroupItem onClick={() => setRadioValue(1)} value="option-one" id="option-one" />
                 <p>Low</p>
               </Label>
             </div>
             <div className={`flex items-center justify-center rounded-[12px] border-[1px] border-[#CFCFCF66] space-x-2 w-[172px] h-[48px] ${useRadio(2)}`}>
-              <Label htmlFor="option-two" className="bg-white w-[170px] rounded-[12px] h-[46px] flex items-center justify-center space-x-3">
+              <Label htmlFor="option-two" className=" cursor-pointer bg-white w-[170px] rounded-[12px] h-[46px] flex items-center justify-center space-x-3">
                 <RadioGroupItem onClick={() => setRadioValue(2)} value="option-two" id="option-two" />
                 <p>Mid</p>
               </Label>
             </div>
             <div className={`flex items-center justify-center rounded-[12px] border-[1px] border-[#CFCFCF66] space-x-2 w-[172px] h-[48px] ${useRadio(3)}`}>
-              <Label htmlFor="option-three" className="bg-white w-[170px] rounded-[12px] h-[46px] flex items-center justify-center space-x-3">
+              <Label htmlFor="option-three" className=" cursor-pointer bg-white w-[170px] rounded-[12px] h-[46px] flex items-center justify-center space-x-3">
                 <RadioGroupItem onClick={() => setRadioValue(3)} value="option-three" id="option-three" />
                 <p>High</p>
               </Label>
