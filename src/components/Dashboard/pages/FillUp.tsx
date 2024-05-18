@@ -210,8 +210,8 @@ const FillUp = () => {
       </div>
 
       <div className="h-[172px] bg-[#F7F7F7] border-t border-[#CFCFCF] border-[1px]">
-        <div className="flex flex-row items-center justify-between px-20">
-          <div className=" mt-10 w-[600px]">
+        <div className="flex flex-row items-center justify-between px-10">
+          <div className=" mt-10 w-[450px]">
             <Stepper index={activeStep} colorScheme='green' >
               {steps.map((step, index) => (
                 <Step key={index}>
@@ -234,7 +234,7 @@ const FillUp = () => {
 
           </div>
           <div className="flex items-center justify-center mt-10">
-            <Button onClick={handleStart} className="w-[682px] h-[64px] rounded-[32px] bg-gradient-to-r from-[#6938EF] to-[#DE80FF] hover:scale-110 transition ease-in-out">
+            <Button onClick={handleStart} className="w-[622px] h-[64px] rounded-[32px] bg-gradient-to-r from-[#6938EF] to-[#DE80FF] hover:scale-110 transition ease-in-out">
               <div className="flex flex-row items-center justify-center space-x-2">
                 <p className="startText">START</p>
                 <img

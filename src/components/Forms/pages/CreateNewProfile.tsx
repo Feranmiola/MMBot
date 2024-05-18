@@ -103,7 +103,7 @@ const CreateNewProfile = () => {
                         <div className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3" >
                           <Label htmlFor="option-one" className=" cursor-pointer bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
                             <RadioGroupItem onClick={() => setRadioValue(1)} value="option-one" id="option-one" className=""/>
-                            <p className="">BSC</p>
+                            <p className="">BNB</p>
                           </Label>
                         </div>
                       </div>
@@ -117,7 +117,7 @@ const CreateNewProfile = () => {
                       </div>
                     </RadioGroup>
                   </div>
-                  {radioValue === 1 ? (
+                  {radioValue === 2 ? (
                     <div className="mt-[1.9rem]">
                       <div className=" mt-1 inputDivFocus items-center justify-center flex h-[64px] w-[360px] rounded-[12px]">
                         <Input className="shad-input" placeholder="Enter Quote Token Address"/>
