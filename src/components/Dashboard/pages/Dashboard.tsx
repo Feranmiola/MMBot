@@ -346,19 +346,17 @@ const Dashboard = () => {
 
         </div>
 
-        <div className="border-[1px] h-[620px] drop-shadow-xl rounded-[16px] p-5 mt-10">
+        <div className="b mt-10">
+          <div className="flex flex-col bg-white border-[1px] rounded-[16px] p-5 drop-shadow-lg ">
           <div>
             <p className="font-bold text-[20px]">Top Wallets🔥</p>
-            <img
-            src=""
-            />
           </div>
-          <Table className="mt-5 minh-[400px] ">
-            <TableBody className=" min-h-">
+          <Table className="mt-5 ">
+            <TableBody className="-">
               {walletsData.map((index) => (
                 <TableRow  key={index.index}>
                   <TableCell>
-                    <div className="flex items-center justify-center flex-row space-x-2">
+                    <div className="flex justify-center flex-row space-x-2 h-[10px]">
                       <div className=" items-center justify-center flex">
                         <p className="text-[14px] font-light"> {index.index}</p>
                       </div>
@@ -389,10 +387,11 @@ const Dashboard = () => {
                   </TableCell>
                 </TableRow>
               ))}
+              <TableRow></TableRow>
             </TableBody>
           </Table>
+          </div>
         </div>
-
       </div>
     </div>
   )
