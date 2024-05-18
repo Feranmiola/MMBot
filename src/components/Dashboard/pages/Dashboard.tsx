@@ -23,6 +23,7 @@ import SupportAndResistanceDialog from "@/components/shared/SupportAndResistance
 import EditSupportAndResistanceContent from "@/components/shared/EditSupportAndResistanceContent"
 import { DialogClose } from "@radix-ui/react-dialog"
 import { useToast } from "@/components/ui/use-toast"
+import { Input } from "@/components/ui/inputWithIcon"
 
 
 const Dashboard = () => {
@@ -208,15 +209,15 @@ const Dashboard = () => {
         </div>
 
       </div>
-      <div className="flex flex-row space-x-6 justify-center">
+      <div className="flex flex-row space-x-1 justify-center">
         <div className="flex flex-col space-y-10 mt-10 items-center justify-center">
           
-          <div className="flex flex-row space-x-8">
+          <div className="flex flex-row space-x-4">
 
             <div className="bg-[#F7F7F7] p-6 rounded-[16px] border-[1px] border-[#CFCFCF80] flex items-center justify-center flex-row space-x-3">
               <p className="text-[20px] font-bold">Take Profit</p>
-              <div className="bg-white p-2 rounded-[12px] border-[1px] border-[#CFCFCF66] flex items-center justify-center">
-                <p className="font-semibold text-[20px]">60%</p>
+              <div>
+                <Input className="bg-white p-2 rounded-[12px] w-[80px] -[48px] border-[1px] border-[#CFCFCF66] flex items-center justify-center"/>
               </div>
               <div className="inputDivSelected rounded-[32px] w-[114px] h-[36px] flex items-center justify-center">
                 <Button className="bg-white rounded-[32px] flex items-center justify-center w-[112px] h-[34px] hover:scale-110 hover:bg-slate-200">
@@ -227,8 +228,8 @@ const Dashboard = () => {
 
             <div className="bg-[#F7F7F7] p-6 rounded-[16px] border-[1px] border-[#CFCFCF80] flex items-center justify-center flex-row space-x-3">
               <p className="text-[20px] font-bold">Increase Lot</p>
-              <div className="bg-white p-2 rounded-[12px] border-[1px] border-[#CFCFCF66] flex items-center justify-center">
-                <p className="font-semibold text-[20px]">40%</p>
+              <div>
+                <Input className="bg-white p-2 rounded-[12px] w-[80px] -[48px] border-[1px] border-[#CFCFCF66] flex items-center justify-center"/>
               </div>
               <div className="inputDivSelected rounded-[32px] w-[97px] h-[36px] flex items-center justify-center">
                 <Button className="bg-white rounded-[32px] flex items-center justify-center w-[95px] h-[34px] hover:scale-110 hover:bg-slate-200">
@@ -240,7 +241,7 @@ const Dashboard = () => {
           </div>
           <div>
             <Card className="py-5 px-2 drop-shadow-md">
-              <CardContent className="flex flex-row space-x-10">
+              <CardContent className="flex flex-row space-x-3">
                 <div className="">
                   <div className="flex flex-row space-x-3">
                     <img
@@ -352,10 +353,10 @@ const Dashboard = () => {
             src=""
             />
           </div>
-          <Table className="mt-5">
+          <Table className="mt-5 w-[450px] min-w-[280px]">
             <TableBody>
               {walletsData.map((index) => (
-                <TableRow key={index.index}>
+                <TableRow  key={index.index}>
                   <TableCell className="font-medium">{index.index}</TableCell>
                   <TableCell className="font-bold">{index.address}</TableCell>
                   <TableCell>
@@ -363,13 +364,13 @@ const Dashboard = () => {
                     src="./assets/dot.svg"
                     />
                   </TableCell>
-                  <TableCell>{index.bnbAmount}</TableCell>
+                  <TableCell className="text-[14px]">{index.bnbAmount}</TableCell>
                   <TableCell>
                     <img
                     src="./assets/dot.svg"
                     />
                   </TableCell>
-                  <TableCell className="text-right">{index.tokenAmount}</TableCell>
+                  <TableCell className="14px">{index.tokenAmount}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
