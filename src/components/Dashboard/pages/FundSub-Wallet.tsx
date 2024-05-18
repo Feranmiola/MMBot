@@ -13,7 +13,7 @@ const FundSuballet = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-20">
       <div>
-        <Card className=" drop-shadow-lg">
+        <Card className=" drop-shadow-md">
           <CardHeader>
             <CardTitle>Fund Sub-Wallets</CardTitle>
           </CardHeader>
@@ -21,6 +21,7 @@ const FundSuballet = () => {
             <div className="flex flex-col space-y-6">
 
               <div>
+                
                 <p className="text-[20px] font-semibold">Amount Per Wallet</p>
                 <div className=" mt-3 inputDivFocus items-center justify-center flex h-[64px] w-[360px] rounded-[12px]">
                   <div className="bg-[#F7F7F7] w-[358px] flex flex-row space-x-4 items-center justify-center rounded-[12px]">

@@ -1,3 +1,4 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import { Routes, Route } from 'react-router-dom'
 import './globals.css'
 import FormLayout from './components/Forms/FormLayout'
@@ -13,7 +14,7 @@ import FundSuballet from './components/Dashboard/pages/FundSub-Wallet'
 function App() {
   
   return (
-    <div>
+    <ChakraProvider>
       <Routes>
         <Route element = {<FormLayout/>}>
                 <Route index element = { <CreateNewProfile/> }/>
@@ -30,7 +31,7 @@ function App() {
               </Route>
       </Routes>
 
-    </div>
+    </ChakraProvider>
   )
 }
 
