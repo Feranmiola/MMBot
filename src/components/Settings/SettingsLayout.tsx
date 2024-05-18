@@ -1,10 +1,16 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, useNavigate } from "react-router-dom"
 import SettingsLeftbar from "../shared/SettingsLeftbar"
 import TopBarDashboard from "../shared/TopBarDashboard"
 import { Separator } from "../ui/separator"
 
 
+
 const SettingsLayout = () => {
+
+  const navigate = useNavigate();
+  const handleHome=  () => {
+    navigate('/dashboard')
+  }
   return (
     <div className="bg-[#FBFAFF]">
       <div>
@@ -35,7 +41,7 @@ const SettingsLayout = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center pb-9">
-          <div className="rounded-full bg-[#F4F3FF] p-3 flex items-center justify-center hover:scale-110 transition ease-in-out hover:bg-[#bab6ea]">
+          <div onClick={handleHome} className="rounded-full bg-[#F4F3FF] p-3 flex items-center justify-center hover:scale-110 transition ease-in-out hover:bg-[#bab6ea] cursor-pointer">
             <img
             src="./assets/back.svg"
             />
