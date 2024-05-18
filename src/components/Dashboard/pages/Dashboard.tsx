@@ -9,6 +9,8 @@ import {
   Table,
   TableBody,
   TableCell,
+  TableHeader,
+  TableHead,
   TableRow,
 } from "@/components/ui/table"
 
@@ -217,7 +219,7 @@ const Dashboard = () => {
             <div className="bg-[#F7F7F7] p-6 rounded-[16px] border-[1px] border-[#CFCFCF80] flex items-center justify-center flex-row space-x-3">
               <p className="text-[20px] font-bold">Take Profit</p>
               <div>
-                <Input className="bg-white p-2 rounded-[12px] w-[80px] -[48px] border-[1px] border-[#CFCFCF66] flex items-center justify-center"/>
+                <Input placeholder="%" className="bg-white p-2 rounded-[12px] w-[80px] -[48px] border-[1px] border-[#CFCFCF66] flex items-center justify-center"/>
               </div>
               <div className="inputDivSelected rounded-[32px] w-[114px] h-[36px] flex items-center justify-center">
                 <Button className="bg-white rounded-[32px] flex items-center justify-center w-[112px] h-[34px] hover:scale-110 hover:bg-slate-200">
@@ -229,7 +231,7 @@ const Dashboard = () => {
             <div className="bg-[#F7F7F7] p-6 rounded-[16px] border-[1px] border-[#CFCFCF80] flex items-center justify-center flex-row space-x-3">
               <p className="text-[20px] font-bold">Increase Lot</p>
               <div>
-                <Input className="bg-white p-2 rounded-[12px] w-[80px] -[48px] border-[1px] border-[#CFCFCF66] flex items-center justify-center"/>
+                <Input placeholder="%" className="bg-white p-2 rounded-[12px] w-[80px] -[48px] border-[1px] border-[#CFCFCF66] flex items-center justify-center"/>
               </div>
               <div className="inputDivSelected rounded-[32px] w-[97px] h-[36px] flex items-center justify-center">
                 <Button className="bg-white rounded-[32px] flex items-center justify-center w-[95px] h-[34px] hover:scale-110 hover:bg-slate-200">
@@ -353,24 +355,42 @@ const Dashboard = () => {
             src=""
             />
           </div>
-          <Table className="mt-5 w-[450px] min-w-[280px]">
+          <Table className="mt-5 ">
             <TableBody>
               {walletsData.map((index) => (
                 <TableRow  key={index.index}>
-                  <TableCell className="font-medium">{index.index}</TableCell>
-                  <TableCell className="font-bold">{index.address}</TableCell>
                   <TableCell>
-                    <img
-                    src="./assets/dot.svg"
-                    />
+                    <div className="flex items-center justify-center flex-row space-x-2">
+                      <div className=" items-center justify-center flex">
+                        <p className="text-[14px] font-light"> {index.index}</p>
+                      </div>
+                      <div className=" items-center justify-center flex">
+                        <p className="text-[14px] font-semibold"> {index.address}</p>
+                      </div>
+                      
+                      <div className=" items-center justify-center flex">
+                        <img
+                        src="./assets/dot.svg"
+                        />
+                      </div>
+
+                      <div className=" items-center justify-center flex">
+                        <p className="text-[14px]"> {index.bnbAmount}</p>
+                      </div>
+                      
+                      <div className=" items-center justify-center flex">
+                        <img
+                        src="./assets/dot.svg"
+                        />
+                      </div>
+
+                      <div className=" items-center justify-center flex">
+                        <p className="text-[14px]"> {index.tokenAmount}</p>
+                      </div>
+                      
+
+                    </div>
                   </TableCell>
-                  <TableCell className="text-[14px]">{index.bnbAmount}</TableCell>
-                  <TableCell>
-                    <img
-                    src="./assets/dot.svg"
-                    />
-                  </TableCell>
-                  <TableCell className="14px">{index.tokenAmount}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
