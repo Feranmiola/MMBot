@@ -9,8 +9,6 @@ import {
   Table,
   TableBody,
   TableCell,
-  TableHeader,
-  TableHead,
   TableRow,
 } from "@/components/ui/table"
 
