@@ -141,6 +141,11 @@
       @apply bg-[#F7F7F7] placeholder:text-[#B7B7BD] focus:bg-white h-[62px] w-[557px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
     }
 
+
+    .shad-input-custom2B{
+      @apply bg-white placeholder:text-[#B7B7BD] focus:bg-white focus:ring-0 focus:ring-offset-0  !important;
+    }
+
     .shad-input-fillup{
       @apply  bg-[#F7F7F7] ring-0 ring-offset-0 border-0 placeholder:text-[#B7B7BD] focus:bg-[#F7F7F7] h-[62px] w-[307px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
     }

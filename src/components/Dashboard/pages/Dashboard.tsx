@@ -12,6 +12,17 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import SupportAndResistanceDialog from "@/components/shared/SupportAndResistanceDialog"
+import EditSupportAndResistanceContent from "@/components/shared/EditSupportAndResistanceContent"
+
+
 const Dashboard = () => {
 
   const walletsData = [
@@ -76,6 +87,9 @@ const Dashboard = () => {
       tokenAmount: "2.045 BTC",
     },
   ]
+
+  const Support = 'Support';
+  const Resistance = 'Resistance';
   return (
     <div>
       <div className="flex flex-row space-x-4 items-center justify-center mt-5">
@@ -89,11 +103,26 @@ const Dashboard = () => {
         </div>
         <div className="flex items-center justify-center space-x-2">
           <p className="text-[#8E8E8E]">Support: <span className="font-semibold text-black">$2.3M</span></p>
-          <div className="flex flex-row items-center justify-center space-x-1">
-            <p className="text-[16px] text-[#6938EF] ">Edit</p>
-            <img
-            src="./assets/edit.svg"
-            />
+          <div className="">
+            <Dialog>
+              <DialogTrigger className="flex flex-row items-center justify-center  space-x-1 hover:scale-110 transition ease-in-out">
+                
+                <p className="text-[16px] text-[#6938EF] ">Edit</p>
+                <img
+                src="./assets/edit.svg"
+                />
+              </DialogTrigger>
+              <DialogContent className="w-[444px] h-[288px] rounded-[16px]">
+                <DialogHeader>
+                <DialogTitle>
+                    <p className="text-[20px] font-bold">Edit Support</p>
+                  </DialogTitle>
+                </DialogHeader>
+                <div>
+                  <SupportAndResistanceDialog changeName={Support}/>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
         
@@ -105,11 +134,26 @@ const Dashboard = () => {
 
         <div className="flex items-center justify-center space-x-2">
           <p className="text-[#8E8E8E]">Resistance: <span className="font-semibold text-black">$2.3M</span></p>
-          <div className="flex flex-row items-center justify-center space-x-1">
-            <p className="text-[16px] text-[#6938EF] ">Edit</p>
-            <img
-            src="./assets/edit.svg"
-            />
+          <div className="">
+            <Dialog>
+              <DialogTrigger className="flex flex-row items-center justify-center  space-x-1 hover:scale-110 transition ease-in-out">
+                
+                <p className="text-[16px] text-[#6938EF] ">Edit</p>
+                <img
+                src="./assets/edit.svg"
+                />
+              </DialogTrigger>
+              <DialogContent className="w-[444px] h-[288px] rounded-[16px]">
+                <DialogHeader>
+                  <DialogTitle>
+                    <p className="text-[20px] font-bold">Edit Resistance</p>
+                  </DialogTitle>
+                </DialogHeader>
+                <div>
+                  <SupportAndResistanceDialog changeName={Resistance}/>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
 
@@ -213,12 +257,32 @@ const Dashboard = () => {
                       />
                       <p className="text-[20px] font-bold">Resistance</p>
                     </div>
-                    <div className="flex flex-row items-center justify-center space-x-1">
-                      <p className="text-[16px] text-[#6938EF] ">Edit</p>
-                      <img
-                      src="./assets/edit.svg"
-                      />
-                    </div>
+                    <Dialog>
+                      <DialogTrigger>
+                        <div className="flex flex-row items-center justify-center space-x-1 hover:scale-110 transition ease-in-out">
+                          <p className="text-[16px] text-[#6938EF] ">Edit</p>
+                          <img
+                          src="./assets/edit.svg"
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent className="w-[871px] h-[825px] min-w-[871px]">
+                        <DialogHeader>
+                          <DialogTitle>
+                            <p className="text-[20px] font-bold">Edit Support & Resistance</p>
+                          </DialogTitle>
+                          <div className="flex flex-col items-center justify-center">
+                            <div>
+                              <Separator />
+                            </div>
+                            <EditSupportAndResistanceContent/>
+                            
+                          </div>
+
+                        </DialogHeader>
+                      </DialogContent>
+                    </Dialog>
+
                   </div>
                   <div className="w-[374px] flex flex-col mt-10 space-y-3">
                     <p className="text-[16px]">This should be done till we sell <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our token balance</p>

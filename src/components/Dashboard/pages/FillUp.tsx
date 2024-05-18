@@ -23,6 +23,7 @@ import {
 } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom"
+import SupportAndResistanceEditingContent from "@/components/shared/SupportAndResistanceEditingContent"
 
 
 const FillUp = () => {
@@ -195,59 +196,9 @@ const FillUp = () => {
 
         <div>
           <Card className="py-5 px-2 drop-shadow-md">
-            <CardContent className="flex flex-row space-x-4">
-              <div className="">
-                <div className="flex flex-row space-x-3">
-                  <img
-                  src="./assets/supportIcon.svg"
-                  />
-                  <p className="text-[20px] font-bold">Support</p>
-                </div>
-                <div className="w-[374px] flex flex-col mt-10 space-y-3">
-                  <p className="text-[18px]">This should be done till we spend <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#6938EF]">%</span></span> of our balance on buying</p>
-                  <Separator/>
-                  <p className="text-[16px]"> <span className="font-bold">Then If </span>in the next <span className="ml-[3px] border-[1px] border-[#6938EF] rounded-[4px] p-[1.5px]">100 <span className="text-[#6938EF]"> mins</span></span> timeline after we finished buying, there are at least 70% of sales in the timeline, then we sell with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#6938EF]">%</span></span> of our token holdings (very quickly).</p>
-
-                  <Separator/>
-                  <p className="text-[16px]"> <span className="font-bold">Else If </span>in the next <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className="text-[#6938EF]"> mins</span></span> timeline after we finished buying, there are at least 70% of buys in the timeline, then we buy with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#6938EF]">%</span></span> of our token holdings (very quickly).</p>
-
-                  <Separator/>
-                  <p className="text-[16px]">After <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#6938EF]">%</span></span> of our tokens are sold, the bot waits then begins buying with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#6938EF]">%</span></span> of our funds. After the buys are at least 70% of volume of a <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className="text-[#6938EF]"> mins</span></span> timeline</p>
-
-                  <Separator/>
-                  <p className="text-[16px]">After we have bought with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#6938EF]">%</span></span> of our funds, the bot waits then begins selling with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#6938EF]">%</span></span> of our tokens. After the sales are at least 70% of volume of a <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className="text-[#6938EF]"> mins</span></span> timeline</p>
-
-                </div>
-              </div>
-              
-              <div>
-                <Separator orientation="vertical" />
-              </div>
-
-              <div>
-                <div className="flex flex-row space-x-3">
-                  <img
-                  src="./assets/resistanceLogo.svg"
-                  />
-                  <p className="text-[20px] font-bold">Resistance</p>
-                </div>
-                <div className="w-[374px] flex flex-col mt-10 space-y-3">
-                  <p className="text-[16px]">This should be done till we sell <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#F4A100]">%</span></span> of our token balance</p>
-                  <Separator/>
-                  <p className="text-[16px]"> <span className="font-bold">Then If </span>in the next <span className="ml-[3px] border-[1px] border-[#F4A100] rounded-[4px] p-[1.5px]">100 <span className="text-[#F4A100]"> mins</span></span> timeline, we finish selling, there are at least 70% of buys in the timeline, then we buy with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#F4A100]">%</span></span> of our funds (very quickly).</p>
-
-                  <Separator/>
-                  <p className="text-[16px]"> <span className="font-bold">Else If </span>in the next <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className="text-[#F4A100]"> mins</span></span> timeline after we finished selling, there are at least 70% of sales in the timeline, then we dell <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#F4A100]">%</span></span> of our token holdings (very quickly).</p>
-
-                  <Separator/>
-                  <p className="text-[16px]">After we have bought with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#F4A100]">%</span></span> of our funds, the bot waits then begins selling with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#F4A100]">%</span></span> of our tokens. After the sales are at least 70% of volume of a <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className="text-[#F4A100]"> mins</span></span> timeline</p>
-
-                  <Separator/>
-                  <p className="text-[16px]">After <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#F4A100]">%</span></span> of our tokens are sold, the bot waits then begins buying with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="text-[#F4A100]">%</span></span> of our funds. After the buys are at least 70% of volume of a <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className="text-[#F4A100]"> mins</span></span> timeline</p>
-
-                </div>
-              </div>
-            </CardContent>
+            <div className="px-5 pb-2">
+              <SupportAndResistanceEditingContent/>
+            </div>
           </Card>
         </div>
 
