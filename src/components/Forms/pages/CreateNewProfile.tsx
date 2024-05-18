@@ -98,14 +98,14 @@ const CreateNewProfile = () => {
                     <p className="text-[20px] font-semibold">Quote Token Address</p>
                     <RadioGroup className="flex flex-row space-x-3 mt-1">
                       <div className={`flex items-center justify-center rounded-[12px] border-[1px] border-[#CFCFCF66] space-x-2 w-[172px] h-[64px] ${useRadio(1)}`}>
-                        <div className="bg-white w-[168px] rounded-[12px] h-[60px] flex items-center justify-center space-x-3">
+                        <div className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
                           <RadioGroupItem onClick={() => setRadioValue(1)} value="option-one" id="option-one" />
                           <p>BSC</p>
                         </div>
                       </div>
                       <div className={`flex items-center justify-center rounded-[12px] border-[1px] border-[#CFCFCF66] space-x-2 w-[172px] h-[64px] ${useRadio(2)}`}>
-                        <div className="bg-white w-[168px] rounded-[12px] h-[60px] flex items-center justify-center space-x-3">
-                          <RadioGroupItem onClick={() => setRadioValue(2)} value="option-two" id="option-two" />
+                        <div className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
+                          <RadioGroupItem className="" onClick={() => setRadioValue(2)} value="option-two" id="option-two" />
                           <p>Custom</p>
                         </div>
                       </div>
@@ -126,7 +126,7 @@ const CreateNewProfile = () => {
                     <div className="bg-[#F7F7F7] focus-within:bg-white h-[58px] w-[747px] flex items-center justify-center flex-row rounded-[12px]">
                       <Input className="shad-input-fillup-noDM bg-white h-[56px] w-[723px] ml-1 " placeholder="Enter Pool Pair"/>
                       
-                      <p className="pr-7 validateText text-[16px] font-bold">Validate</p>
+                      <p className="pr-3 validateText text-[16px] font-bold">Validate</p>
                     </div>
                   </div>
                 </div>
