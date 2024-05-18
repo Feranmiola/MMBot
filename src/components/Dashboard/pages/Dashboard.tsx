@@ -346,15 +346,15 @@ const Dashboard = () => {
 
         </div>
 
-        <div className="border-[1px] rounded-[16px] p-5 mt-10">
+        <div className="border-[1px] h-[620px] drop-shadow-xl rounded-[16px] p-5 mt-10">
           <div>
             <p className="font-bold text-[20px]">Top Wallets🔥</p>
             <img
             src=""
             />
           </div>
-          <Table className="mt-5 ">
-            <TableBody>
+          <Table className="mt-5 minh-[400px] ">
+            <TableBody className=" min-h-">
               {walletsData.map((index) => (
                 <TableRow  key={index.index}>
                   <TableCell>
@@ -385,8 +385,6 @@ const Dashboard = () => {
                       <div className=" items-center justify-center flex">
                         <p className="text-[14px]"> {index.tokenAmount}</p>
                       </div>
-                      
-
                     </div>
                   </TableCell>
                 </TableRow>
