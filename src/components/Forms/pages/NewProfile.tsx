@@ -1,10 +1,12 @@
 import TopBarForms from "@/components/shared/TopBarForms";
 import FormBottomBar from "@/components/shared/FormBottomBar"
 import { Button } from "@/components/ui/button";
-import {notification, } from 'antd';
+import { useToast } from "@/components/ui/use-toast";
+
 
 const NewProfile = () => {
-  const [api, contextHolder] = notification.useNotification();
+  
+  const { toast } = useToast()
   
   const walletAddress = 'uisdbfhj89234hjkadenfbjkwkk';
   const privateKey = "uisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkk";
@@ -14,11 +16,10 @@ const NewProfile = () => {
   const initValue = 15;
 
   const handleCopy = (text: string) =>{
-    api.success({
-      message: `Copied`,
-      description:
-        'Copied to Clipboard',
-    });
+    toast({
+      title: "Copied to Clipboard",
+      description: "Text has been copied to clipboard",
+    })
     navigator.clipboard.writeText(text);
   }
 
@@ -29,7 +30,6 @@ const NewProfile = () => {
 
   return (
     <div className="flex flex-col items-center justify-center mt-16 pb-10">
-      {contextHolder}
     <div className="mb-16">
       <TopBarForms prpgressValue = {newValue} oldValue = {initValue}/>
     </div>
