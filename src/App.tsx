@@ -12,23 +12,23 @@ import FillUp from './components/Dashboard/pages/FillUp'
 import FundSuballet from './components/Dashboard/pages/FundSub-Wallet'
 
 function App() {
-  
+
   return (
     <ChakraProvider>
       <Routes>
-        <Route element = {<FormLayout/>}>
-                <Route index element = { <CreateNewProfile/> }/>
-                <Route path= "/create-sub-wallets" element = { <CreateSubWallets/> } />
-                <Route path= "/new-profile" element = { <NewProfile/> } />
-                <Route path= "/sub-wallets" element = { <CreateSubWallets/> } />
-                <Route path= "/sub-wallets-View" element = { <ViewSubWallets/> } />
-              </Route>
+        <Route element={<FormLayout />}>
+          <Route index element={<CreateNewProfile />} />
+          <Route path="/create-sub-wallets" element={<CreateSubWallets />} />
+          <Route path="/new-profile" element={<NewProfile />} />
+          <Route path="/sub-wallets" element={<CreateSubWallets />} />
+          <Route path="/sub-wallets-View" element={<ViewSubWallets />} />
+        </Route>
 
-              <Route element = {<DashboardLayout/>}>
-                <Route path= "/dashboard" element = { <Dashboard/> } />
-                <Route path= "/fillUp" element = { <FillUp/> } />
-                <Route path= "/fundsubwallets" element = { <FundSuballet/> } />
-              </Route>
+        <Route element={<DashboardLayout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/fillUp" element={<FillUp />} />
+          <Route path="/fundsubwallets" element={<FundSuballet />} />
+        </Route>
       </Routes>
 
     </ChakraProvider>
