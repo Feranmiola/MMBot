@@ -1,4 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 
 const TopBarDashboard = () => {
 
@@ -13,12 +22,26 @@ const TopBarDashboard = () => {
     <div className="px-16 bg-[#F4F3FF] h-[131px]">
       <div className="">
         <div className="flex flex-row justify-between items-center pt-10">
-          <div className="flex flex-row items-center justify-center cursor-pointer hover:scale-110 transition ease-in-out ">
-            <p className="text-[24px] font-bold">New Profile</p>
-            <img
-            src="./assets/dropDown.svg"
-            />
-          </div>
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+            <div className="flex flex-row items-center justify-center cursor-pointer hover:scale-110 transition ease-in-out ">
+              <p className="text-[24px] font-bold">New Profile</p>
+              <img
+              src="./assets/dropDown.svg"
+              />
+            </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <div className="w-[200px] px-4">
+                <DropdownMenuLabel className="text-[20px] font-bold">My Profiles</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem className="text-[16px] font-medium">Profile 1</DropdownMenuItem>
+                <DropdownMenuItem className="text-[16px] font-medium">Profile 2</DropdownMenuItem>
+                <DropdownMenuItem className="text-[16px] font-medium">Profile 3</DropdownMenuItem>
+                <DropdownMenuItem className="text-[16px] font-medium">Profile $</DropdownMenuItem>
+              </div>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <div className="flex flex-row space-x-3">
             <div className="flex flex-row bg-white rounded-[8px] p-2 px-3 cursor-pointer hover:scale-110 transition ease-in-out">
               <img
