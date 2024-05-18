@@ -1,6 +1,8 @@
 import TopBarForms from "@/components/shared/TopBarForms";
 import FormBottomBar from "@/components/shared/FormBottomBar"
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+
 
 import {
   Select,
@@ -98,24 +100,34 @@ const CreateNewProfile = () => {
                     <p className="text-[20px] font-semibold">Quote Token Address</p>
                     <RadioGroup className="flex flex-row space-x-3 mt-1">
                       <div className={`flex items-center justify-center rounded-[12px] border-[1px] border-[#CFCFCF66] space-x-2 w-[172px] h-[64px] ${useRadio(1)}`}>
-                        <div className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
-                          <RadioGroupItem onClick={() => setRadioValue(1)} value="option-one" id="option-one" />
-                          <p>BSC</p>
+                        <div className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3" >
+                          <Label htmlFor="option-one" className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
+                            <RadioGroupItem onClick={() => setRadioValue(1)} value="option-one" id="option-one" className=""/>
+                            <p className="">BSC</p>
+                          </Label>
                         </div>
                       </div>
                       <div className={`flex items-center justify-center rounded-[12px] border-[1px] border-[#CFCFCF66] space-x-2 w-[172px] h-[64px] ${useRadio(2)}`}>
                         <div className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
-                          <RadioGroupItem className="" onClick={() => setRadioValue(2)} value="option-two" id="option-two" />
-                          <p>Custom</p>
+                          <Label htmlFor="option-two" className="bg-white w-[170px] rounded-[12px] h-[62px]  flex items-center justify-center space-x-3">
+                            <RadioGroupItem className="" onClick={() => setRadioValue(2)} value="option-two" id="option-two" />
+                            <p className="">Custom</p>
+                          </Label>
                         </div>
                       </div>
                     </RadioGroup>
                   </div>
-                  <div className="mt-[1.9rem]">
-                    <div className=" mt-1 inputDivFocus items-center justify-center flex h-[64px] w-[360px] rounded-[12px]">
-                      <Input className="shad-input" placeholder="Enter Quote Token Address"/>
+                  {radioValue === 1 ? (
+                    <div className="mt-[1.9rem]">
+                      <div className=" mt-1 inputDivFocus items-center justify-center flex h-[64px] w-[360px] rounded-[12px]">
+                        <Input className="shad-input" placeholder="Enter Quote Token Address"/>
+                      </div>
                     </div>
-                  </div>
+                  ): (
+                    <div>
+                      
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex flex-col ">
