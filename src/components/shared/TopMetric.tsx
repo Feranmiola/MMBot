@@ -5,7 +5,6 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 
-  
 const TopMetric = () => {
   return (
     <div className="flex items-center justify-center flex-row space-x-10 mt-4">
@@ -22,6 +21,7 @@ const TopMetric = () => {
                     <CardDescription>Token Deposits</CardDescription>
                     <img
                     src="./assets/download.svg"
+                    className="hover:scale-110 transition ease-in-out cursor-pointer"
                     />
                 </div>
                 <CardTitle>10</CardTitle>

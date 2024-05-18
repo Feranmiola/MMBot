@@ -234,12 +234,18 @@ const Dashboard = () => {
                     <p className="text-[16px]"> <span className="font-bold">Then If </span>in the next <span className="ml-[3px] border-[1px]  rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline after we finished buying, there are at least 70% of sales in the timeline, then we sell with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our token holdings (very quickly).</p>
 
                     <Separator/>
-                    <p className="text-[16px]"> <span className="font-bold">Else If </span>in the next <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline after we finished buying, there are at least 70% of buys in the timeline, then we buy with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our token holdings (very quickly).</p>
+                    <p className="text-[16px]"> <span className="font-bold">Else If </span>in the next <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline after we finished buying, there are at least 70% of buys in the timeline, then we buy with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our finds (very quickly).</p>
 
-                    <Separator/>
-                    <p className="text-[16px]">After <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our tokens are sold, the bot waits then begins buying with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our funds. After the buys are at least 70% of volume of a <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline</p>
+                    
+                    <p className="pt-5 text-[16px]">After <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our tokens are sold, the bot waits then begins buying with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our funds. After the buys are at least 70% of volume of a <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline</p>
 
-                    <Separator/>
+                    <div className="flex items-center justify-center py-5">
+                      <Separator/>
+                      <div className="absolute text-[#CECECE] bg-white px-2">
+                          or
+                      </div>
+                    </div>
+
                     <p className="text-[16px]">After we have bought with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our funds, the bot waits then begins selling with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our tokens. After the sales are at least 70% of volume of a <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline</p>
 
                   </div>
@@ -290,12 +296,18 @@ const Dashboard = () => {
                     <p className="text-[16px]"> <span className="font-bold">Then If </span>in the next <span className="ml-[3px] border-[1px]  rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline, we finish selling, there are at least 70% of buys in the timeline, then we buy with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our funds (very quickly).</p>
 
                     <Separator/>
-                    <p className="text-[16px]"> <span className="font-bold">Else If </span>in the next <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline after we finished selling, there are at least 70% of sales in the timeline, then we dell <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our token holdings (very quickly).</p>
+                    <p className="text-[16px]"> <span className="font-bold">Else If </span>in the next <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline after we finished selling, there are at least 70% of sales in the timeline, then we sell <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our token holdings (very quickly).</p>
 
-                    <Separator/>
-                    <p className="text-[16px]">After we have bought with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our funds, the bot waits then begins selling with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our tokens. After the sales are at least 70% of volume of a <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline</p>
+                    
+                    <p className="pt-5 text-[16px]">After we have bought with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our funds, the bot waits then begins selling with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our tokens. After the sales are at least 70% of volume of a <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline</p>
 
-                    <Separator/>
+                    <div className="flex items-center justify-center py-5">
+                      <Separator/>
+                      <div className="absolute text-[#CECECE] bg-white px-2">
+                          or
+                      </div>
+                    </div>
+
                     <p className="text-[16px]">After <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our tokens are sold, the bot waits then begins buying with <span className="border-[1px] rounded-[4px] p-[1.5px]">100 <span className="">%</span></span> of our funds. After the buys are at least 70% of volume of a <span className="ml-[3px] border-[1px] border-[#CECECE] rounded-[4px] p-[1.5px]">100 <span className=""> mins</span></span> timeline</p>
 
                   </div>
