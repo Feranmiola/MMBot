@@ -6,7 +6,7 @@ const SettingsLeftbar = () => {
     function useActive(path: string) {
         const location = useLocation();
         let isActive = location.pathname === path;
-         return isActive ? 'bg-[#F4F3FF] transition ease-in-out text-[#6938EF] ml02 text-center p-2 rounded-[4px]' : '';
+         return isActive ? 'bg-[#F4F3FF] transition ease-in-out text-[#6938EF] text-center p-2 rounded-[4px]' : '';
       }
 
       const links = [
