@@ -12,6 +12,10 @@ import FillUp from './components/Dashboard/pages/FillUp'
 import FundSuballet from './components/Dashboard/pages/FundSub-Wallet'
 import SettingsLayout from './components/Settings/SettingsLayout'
 import AddWallets from './components/Settings/pages/AddWallets'
+import TransferFunds from './components/Settings/pages/TransferFunds'
+import SwapRate from './components/Settings/pages/SwapRate'
+import VolumeWallets from './components/Settings/pages/VolumeWallets'
+import SwapRange from './components/Settings/pages/SwapRange'
 
 function App() {
 
@@ -34,8 +38,10 @@ function App() {
 
         <Route element={<SettingsLayout />}>
           <Route path="/addwallets" element={<AddWallets />} />
-          <Route path="/fillUp" element={<FillUp />} />
-          <Route path="/fundsubwallets" element={<FundSuballet />} />
+          <Route path="/transferfunds" element={<TransferFunds />} />
+          <Route path="/swaprate" element={<SwapRate />} />
+          <Route path="/volumewallets" element={<VolumeWallets />} />
+          <Route path="/swaprange" element={<SwapRange />} />
         </Route>
       </Routes>
 
