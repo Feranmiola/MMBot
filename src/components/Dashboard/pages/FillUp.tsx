@@ -63,7 +63,7 @@ const FillUp = () => {
   
   return (
     <div>
-      <div className="flex items-center justify-center flex-row space-x-10 mt-20 pb-20">
+      <div className="flex  justify-center flex-row space-x-3 mt-20 pb-20">
         <div>
           <Card className=" drop-shadow-md">
             <CardHeader>
@@ -200,7 +200,7 @@ const FillUp = () => {
 
         <div>
           <Card className="py-5 px-2 drop-shadow-md">
-            <div className="px-5 pb-2">
+            <div className="px-2 flex items-center justify-center5 pb-2">
               <SupportAndResistanceEditingContent/>
             </div>
           </Card>

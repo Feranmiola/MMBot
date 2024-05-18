@@ -44,7 +44,7 @@ const TopMetric = () => {
 
 
   return (
-    <div className="flex items-center justify-center flex-row space-x-10 mt-4">
+    <div className="flex items-center justify-center flex-row space-x-3 mt-4">
         <Card className="w-[292.75px]">
             <CardHeader>
             <CardDescription>Token Deposits</CardDescription>
