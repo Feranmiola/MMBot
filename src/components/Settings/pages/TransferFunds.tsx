@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { useToast } from "@/components/ui/use-toast";
 
 const TransferFunds = () => {
+  const { toast } = useToast();
+
   const [walletAmount, setWalletAmount] = useState(0);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -11,9 +14,6 @@ const TransferFunds = () => {
     setWalletAmount(Number(inputValue));
   };
 
-const handleSubmit =() =>{
-  console.log(walletAmount);
-}
 
 const [radioValue, setRadioValue] = useState(0);
   
@@ -24,6 +24,18 @@ const [radioValue, setRadioValue] = useState(0);
       return 'bg-white'
     }
   }
+
+  const handleSubmit =() =>{
+  
+      toast({
+          title: "Funds Transferred",
+          description: "Addresses have been funded successfully",
+        })
+
+        console.log(walletAmount)
+  }
+
+
   return (
     <div>
       <div>

@@ -8,17 +8,29 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { useNavigate } from "react-router-dom"
+import { useToast } from "@/components/ui/use-toast"
+
+
 
 
 const FundSuballet = () => {
 
+  const { toast } = useToast()
   const navigate = useNavigate()
 
   const handleFund =()=>{
+    
+    toast({
+      title: "Funded",
+      description: "All Addresses have been finded",
+    })
+
     navigate('/fillup');
   }
+
   return (
     <div className="flex flex-col items-center justify-center mt-20">
+      
       <div>
         <Card className=" drop-shadow-md">
           <CardHeader>

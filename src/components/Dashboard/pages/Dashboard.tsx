@@ -21,6 +21,8 @@ import {
 } from "@/components/ui/dialog"
 import SupportAndResistanceDialog from "@/components/shared/SupportAndResistanceDialog"
 import EditSupportAndResistanceContent from "@/components/shared/EditSupportAndResistanceContent"
+import { DialogClose } from "@radix-ui/react-dialog"
+import { useToast } from "@/components/ui/use-toast"
 
 
 const Dashboard = () => {
@@ -88,8 +90,14 @@ const Dashboard = () => {
     },
   ]
 
-  const Support = 'Support';
-  const Resistance = 'Resistance';
+  const { toast } = useToast()
+
+    const handleUpdate = () =>{
+      toast({
+        title: "Updated",
+        description: "Value has been updated",
+      })
+    }
   return (
     <div>
       <div className="flex flex-row space-x-4 items-center justify-center mt-5">
@@ -119,8 +127,14 @@ const Dashboard = () => {
                   </DialogTitle>
                 </DialogHeader>
                 <div>
-                  <SupportAndResistanceDialog changeName={Support}/>
+                  <SupportAndResistanceDialog />
                 </div>
+                <DialogClose>
+                <div className="flex flex-row justify-between items-center ">
+                    <p className="text-[#8E8E8E] text-[16px]">Total: <span className="text-[#1D1D1D] font-medium">410 BNB</span></p>
+                      <Button onClick={handleUpdate} className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[117px] hover:scale-110 transition ease-in-out h-[48px] text-[16px] rounded-full">Update</Button>
+                  </div>
+                </DialogClose>
               </DialogContent>
             </Dialog>
           </div>
@@ -150,8 +164,14 @@ const Dashboard = () => {
                   </DialogTitle>
                 </DialogHeader>
                 <div>
-                  <SupportAndResistanceDialog changeName={Resistance}/>
+                  <SupportAndResistanceDialog />
                 </div>
+                <DialogClose>
+                <div className="flex flex-row justify-between items-center ">
+                    <p className="text-[#8E8E8E] text-[16px]">Total: <span className="text-[#1D1D1D] font-medium">410 BNB</span></p>
+                      <Button onClick={handleUpdate} className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[117px] hover:scale-110 transition ease-in-out h-[48px] text-[16px] rounded-full">Update</Button>
+                  </div>
+                </DialogClose>
               </DialogContent>
             </Dialog>
           </div>
@@ -282,6 +302,13 @@ const Dashboard = () => {
                               <Separator />
                             </div>
                             <EditSupportAndResistanceContent/>
+                            <div className=" items-end justify-end">
+                              <DialogClose>
+                                <div className="items-end justify-end mt-3">
+                                  <Button  className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[200px] hover:scale-110 transition ease-in-out h-[60px] text-[16px] rounded-full" onClick={handleUpdate}>Update</Button>
+                                </div>
+                              </DialogClose>
+                            </div>
                             
                           </div>
 

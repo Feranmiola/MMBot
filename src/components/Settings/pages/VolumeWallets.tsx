@@ -1,7 +1,18 @@
 import { Input } from "@/components/ui/inputWithIcon"
 import { Button } from "@/components/ui/button"
+import { useToast } from "@/components/ui/use-toast"
 
 const VolumeWallets = () => {
+
+  const { toast } = useToast()
+
+  const handleSubmit =() =>{
+  
+      toast({
+          title: "Updated",
+          description: "Value Updated successfully",
+        })
+  }
   return (
     <div>
       <p className="text-[20px] font-bold">Volume Wallets</p>
@@ -16,7 +27,7 @@ const VolumeWallets = () => {
           </div>
         </div>
         <div className="flex items-end justify-end mt-3">
-          <Button  className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[117px] hover:scale-110 transition ease-in-out h-[48px] text-[16px] rounded-full">Update</Button>
+          <Button onClick={handleSubmit}  className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[117px] hover:scale-110 transition ease-in-out h-[48px] text-[16px] rounded-full">Update</Button>
         </div>
       </div>
     </div>

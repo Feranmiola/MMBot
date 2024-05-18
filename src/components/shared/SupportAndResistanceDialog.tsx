@@ -1,17 +1,9 @@
-
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator"
 import { Input } from "@/components/ui/input";
 
-interface Props{
-  changeName: string;
-}
 
-const SupportAndResistanceDialog : React.FC<Props> = ({ changeName }) => {
+const SupportAndResistanceDialog =() => {
 
-    const handleUpdate = () =>{
-        console.log(changeName);
-    }
   return (
     <div className="flex items-center justify-center">
          <div className="flex flex-col space-y-6">
@@ -26,12 +18,6 @@ const SupportAndResistanceDialog : React.FC<Props> = ({ changeName }) => {
         </div>
 
         <Separator/>
-
-        <div className="flex flex-row justify-between items-center ">
-        <p className="text-[#8E8E8E] text-[16px]">Total: <span className="text-[#1D1D1D] font-medium">410 BNB</span></p>
-          <Button onClick={handleUpdate}  className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[117px] hover:scale-110 transition ease-in-out h-[48px] text-[16px] rounded-full">Update</Button>
-        </div>
-
         </div>
     </div>
   )

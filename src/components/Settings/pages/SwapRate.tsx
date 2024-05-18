@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { useToast } from "@/components/ui/use-toast";
 
 const SwapRate = () => {
   
 
   const [radioValue, setRadioValue] = useState(0);
+
   function useRadio(value: number){
     if(radioValue == value){
       return 'inputDivSelected'
@@ -13,6 +15,15 @@ const SwapRate = () => {
       return 'bg-white'
     }
   }
+  
+  const { toast } = useToast()
+
+    const handleUpdate = () =>{
+      toast({
+        title: "Updated",
+        description: "Valu has been updated",
+      })
+    }
 
   return (
     <div>
@@ -45,7 +56,7 @@ const SwapRate = () => {
         </div>
       </div>
       <div className="flex items-end justify-end mt-3">
-          <Button  className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[117px] hover:scale-110 transition ease-in-out h-[48px] text-[16px] rounded-full">Update</Button>
+          <Button onClick={handleUpdate}  className="bg-gradient-to-r from-[#6938EF] to-[#DE80FF] w-[117px] hover:scale-110 transition ease-in-out h-[48px] text-[16px] rounded-full">Update</Button>
         </div>
     </div>
   )

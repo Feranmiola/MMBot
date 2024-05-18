@@ -17,10 +17,14 @@ import SwapRate from './components/Settings/pages/SwapRate'
 import VolumeWallets from './components/Settings/pages/VolumeWallets'
 import SwapRange from './components/Settings/pages/SwapRange'
 
+import { Toaster } from "@/components/ui/toaster"
+
+
 function App() {
 
   return (
     <ChakraProvider>
+      <Toaster/>
       <Routes>
         <Route element={<FormLayout />}>
           <Route index element={<CreateNewProfile />} />

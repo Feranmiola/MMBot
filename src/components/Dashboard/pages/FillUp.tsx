@@ -24,10 +24,11 @@ import {
 import { Box } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom"
 import SupportAndResistanceEditingContent from "@/components/shared/SupportAndResistanceEditingContent"
-
+import { useToast } from "@/components/ui/use-toast"
 
 const FillUp = () => {
   const [radioValue, setRadioValue] = useState(0);
+  const { toast } = useToast()
 
   function useRadio(value: number){
     if(radioValue == value){
@@ -52,7 +53,10 @@ const FillUp = () => {
 
 
   const handleStart =()=>{
-
+    toast({
+      title: "Starting Bot",
+      description: "The bot is starting",
+    })
     navigate('/dashboard');
 
   }

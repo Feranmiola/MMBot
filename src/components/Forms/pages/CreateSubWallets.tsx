@@ -20,12 +20,18 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
+import { CSVLink } from 'react-csv';
+import { useToast } from "@/components/ui/use-toast"
+
+
 const CreateSubWallets = () => {
   const [isGenerated, setisGenerated] = useState(false)
   const buttonText = "Proceed to Account";
   const nextLink = "/fundsubwallets";
   const newValue = 50;
   const initValue = 30;
+  const { toast } = useToast()
+  
 
   const [walletAmount, setWalletAmount] = useState(0)
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,8 +40,15 @@ const CreateSubWallets = () => {
   };
 
   const handleGenerate = () =>{
+    toast({
+      title: "Generated",
+      description: "Addresses have been generated",
+    })
     setisGenerated(true);
   }
+
+
+  const wallet= '0x17145c085E4553C522454e217268941Edad17E74c';
 
 
   const tableData = [
@@ -68,6 +81,8 @@ const CreateSubWallets = () => {
 
   const totalPages = Math.ceil(tableData.length / rowsPerPage);
 
+  
+
   // Render the pagination links
   // const paginationLinks = [];
   // for (let i = 1; i <= totalPages; i++) {
@@ -81,6 +96,22 @@ const CreateSubWallets = () => {
   //     </PaginationItem>
   //   );
   // }
+
+
+  const handleCopy = (text: string) =>{
+    toast({
+      title: "Copied to clipboard",
+      description: "Text has been copied to clipboard",
+    })
+    navigator.clipboard.writeText(text);
+  }
+
+  const handleDownload = () =>{
+    toast({
+      title: "Downlading",
+      description: "Addresses are downloading",
+    })
+  }
 
 
 
@@ -108,6 +139,8 @@ const CreateSubWallets = () => {
               <p>0x17145c07869...41Edad17E74c</p>
               <img
               src="./assets/copyLogoSingle.svg"
+              className="hover:scale-150 transition ease-in-out cursor-pointer "
+              onClick={() => handleCopy(wallet)}
               />
             </div>
           </div>
@@ -140,12 +173,14 @@ const CreateSubWallets = () => {
             <div>
                <div className="flex flex-row justify-between items-center">
                 <p className="text-[#1D1D1D] text-[24px] font-bold">Sub-wallets <span className=" font-light"> - {walletAmount}</span></p>
-                <div className="flex flex-row space-x-2 items-center justify-center">
-                  <p className="validateText font-medium">Download CSV</p>
-                  <img
-                  src="./assets/download.svg"
-                  />
-                </div>
+                <CSVLink data={tableData} filename="sub-wallets.csv" onClick={handleDownload}>
+                  <div className="flex flex-row space-x-2 items-center justify-center hover:scale-110 transition ease-in-out cursor-pointer">
+                    <p className="validateText font-medium">Download CSV</p>
+                    <img
+                    src="./assets/download.svg"
+                    />
+                  </div>
+                </CSVLink>
               </div>
               <div className="mt-5">
                 <Table>
@@ -158,6 +193,8 @@ const CreateSubWallets = () => {
                           <div>
                             <img
                             src="./assets/copyLogoSingle.svg"
+                            className="hover:scale-150 transition ease-in-out cursor-pointer "
+                            onClick={() => handleCopy(index.address)}
                             />
                           </div>
                         </TableCell>

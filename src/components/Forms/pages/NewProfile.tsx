@@ -1,9 +1,10 @@
 import TopBarForms from "@/components/shared/TopBarForms";
 import FormBottomBar from "@/components/shared/FormBottomBar"
 import { Button } from "@/components/ui/button";
+import {notification, } from 'antd';
 
 const NewProfile = () => {
-  
+  const [api, contextHolder] = notification.useNotification();
   
   const walletAddress = 'uisdbfhj89234hjkadenfbjkwkk';
   const privateKey = "uisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkk";
@@ -12,12 +13,23 @@ const NewProfile = () => {
   const newValue = 30;
   const initValue = 15;
 
+  const handleCopy = (text: string) =>{
+    api.success({
+      message: `Copied`,
+      description:
+        'Copied to Clipboard',
+    });
+    navigator.clipboard.writeText(text);
+  }
+
+
 
 
 
 
   return (
     <div className="flex flex-col items-center justify-center mt-16 pb-10">
+      {contextHolder}
     <div className="mb-16">
       <TopBarForms prpgressValue = {newValue} oldValue = {initValue}/>
     </div>
@@ -40,7 +52,8 @@ const NewProfile = () => {
               <p className=" font-extrabold text-[32px]">{walletAddress}</p>
               <img
               src="./assets/copyGradient.svg"
-              className="mt-[-46px] ml-[-40px]"
+              className="mt-[-46px] ml-[-40px] cursor-pointer hover:scale-150 transition ease-in-out "
+              onClick={() => handleCopy(walletAddress)}
               />
             </div>
 
@@ -55,7 +68,7 @@ const NewProfile = () => {
             </div>
 
             <div className="inputDivSelected rounded-[32px] w-[110px] h-[42px] flex items-center justify-center mt-4">
-              <Button className="bg-white rounded-[32px] hover:scale-110 hover:bg-slate-200">
+              <Button className="bg-white rounded-[32px] hover:scale-110 hover:bg-slate-200" onClick={() => handleCopy(privateKey)}>
                 <p className="validateText font-medium text-[18px]"> Copy Key</p>
               </Button>
             </div>

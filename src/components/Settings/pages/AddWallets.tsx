@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
+import { useToast } from "@/components/ui/use-toast";
 
 const AddWallets = () => {
 
@@ -11,8 +12,14 @@ const AddWallets = () => {
     setWalletAmount(Number(inputValue));
   };
 
+  const { toast } = useToast()
+
 const handleSubmit =() =>{
-  console.log(walletAmount);
+
+    toast({
+        title: "Generated",
+        description: "Waallets genetated successfully",
+      })
 }
 
   return (
