@@ -28,8 +28,8 @@ const CreateSubWallets = () => {
   const [isGenerated, setisGenerated] = useState(false)
   const buttonText = "Proceed to Account";
   const nextLink = "/fundsubwallets";
-  const newValue = 50;
-  const initValue = 30;
+  const newValue = 75;
+  const initValue = 50;
   const { toast } = useToast()
   
 

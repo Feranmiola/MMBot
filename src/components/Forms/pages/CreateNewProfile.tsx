@@ -20,7 +20,7 @@ const CreateNewProfile = () => {
   const [radioValue, setRadioValue] = useState(0);
   const buttonText = "Create Profile";
   const nextLink = "/new-profile";
-  const newValue = 15;
+  const newValue = 25;
   const initValue = 0;
 
   function useRadio(value: number){

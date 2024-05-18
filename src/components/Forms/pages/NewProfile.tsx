@@ -12,8 +12,8 @@ const NewProfile = () => {
   const privateKey = "uisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkkuisdbfhj89234hjkadenfbjkwkk";
   const buttonText = "Proceed";
   const nextLink = "/sub-wallets";
-  const newValue = 30;
-  const initValue = 15;
+  const newValue = 50;
+  const initValue = 25;
 
   const handleCopy = (text: string) =>{
     toast({
