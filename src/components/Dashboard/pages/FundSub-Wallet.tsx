@@ -6,13 +6,14 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
 
 
 const FundSuballet = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-20">
       <div>
-        <Card className=" drop-shadow">
+        <Card className=" drop-shadow-lg">
           <CardHeader>
             <CardTitle>Fund Sub-Wallets</CardTitle>
           </CardHeader>
@@ -38,6 +39,8 @@ const FundSuballet = () => {
                   </div>
                 </div>
               </div>
+
+              <Separator />
 
               <div className="flex flex-row justify-between items-center ">
                 <p className="text-[#8E8E8E] text-[16px]">Total: <span className="text-[#1D1D1D] font-medium">410 BNB</span></p>
