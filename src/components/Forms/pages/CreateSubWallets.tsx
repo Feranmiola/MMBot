@@ -127,7 +127,7 @@ const CreateSubWallets = () => {
                     <Input className="shad-input-custom2 w-[557px]" placeholder="Enter Sub Wallet Number" onChange={handleInputChange}/>
                   </div>
                   <div className="inputDivSelected rounded-[32px] w-[190px] h-[60px] flex items-center justify-center mt-4">
-                  <Button className="bg-white rounded-[32px] flex items-center justify-center w-[189px] h-[58px] hover:scale-110 hover:bg-slate-200">
+                  <Button className="bg-white rounded-[32px] flex items-center justify-center w-[188px] h-[58px] hover:scale-110 hover:bg-slate-200">
                     <p className="validateText font-semibold text-[18px]" onClick={handleGenerate}> Create Wallets</p>
                   </Button>
                 </div>
