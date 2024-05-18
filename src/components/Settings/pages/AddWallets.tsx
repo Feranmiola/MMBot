@@ -17,7 +17,7 @@ const handleSubmit =() =>{
 
   return (
     <div>
-      <p>Add Wallets</p>
+      <p className="text-[20px] font-bold">Add Wallets</p>
       
       <div>
         <p className="text-[20px] font-medium">No. of Wallets</p>

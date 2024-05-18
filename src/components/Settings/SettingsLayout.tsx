@@ -12,7 +12,7 @@ const SettingsLayout = () => {
       </div>
 
       <div className="flex flex-col space-y-10 items-center justify-center">
-        <div className="w-[847px] h-[596px] bg-white drop-shadow-lg p-6 space-y-10 mt-7">
+        <div className="w-[847px] h-[596px] bg-white drop-shadow rounded-[16px] border-[1px] border-[#CFCFCF80]-lg p-6 space-y-10 mt-7">
           <div className="flex flex-row items-center space-x-2">
           `<img
             src="./assets/settingsColored.svg"
